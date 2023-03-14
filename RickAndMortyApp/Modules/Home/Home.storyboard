@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="RickAndMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Home" translatesAutoresizingMaskIntoConstraints="NO" id="rhy-Lt-vJU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="U9X-fT-uVK">
+                                <rect key="frame" x="114" y="59" width="165" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="2ti-pK-Biz"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="anD-eb-Bte">
+                                <rect key="frame" x="30" y="141" width="333" height="711"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VNU-Na-xvm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="X5g-Vj-VZp"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="EgJ-HR-QGs"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Spu-i8-B8y">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" name="Neon-verde"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rhy-Lt-vJU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="655-cl-coC"/>
+                            <constraint firstItem="anD-eb-Bte" firstAttribute="top" secondItem="U9X-fT-uVK" secondAttribute="bottom" constant="30" id="Aew-yx-m9m"/>
+                            <constraint firstItem="U9X-fT-uVK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mxm-59-ce3"/>
+                            <constraint firstItem="anD-eb-Bte" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="QQP-2u-yrV"/>
+                            <constraint firstItem="Spu-i8-B8y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tuw-63-6Wh"/>
+                            <constraint firstItem="rhy-Lt-vJU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WVR-n4-piM"/>
+                            <constraint firstAttribute="bottom" secondItem="anD-eb-Bte" secondAttribute="bottom" id="ctq-wo-ozd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="anD-eb-Bte" secondAttribute="trailing" constant="30" id="eTy-bD-7aN"/>
+                            <constraint firstItem="rhy-Lt-vJU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="enY-dw-yDJ"/>
+                            <constraint firstAttribute="bottom" secondItem="rhy-Lt-vJU" secondAttribute="bottom" id="qvd-bU-gbN"/>
+                            <constraint firstItem="U9X-fT-uVK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rGD-3g-1U3"/>
+                            <constraint firstItem="Spu-i8-B8y" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="wGm-NN-M6p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actLoading" destination="Spu-i8-B8y" id="fH1-QO-8Ju"/>
+                        <outlet property="collectionView" destination="anD-eb-Bte" id="F1X-35-mF9"/>
+                        <outlet property="imgBackground" destination="rhy-Lt-vJU" id="ze9-oL-TRZ"/>
+                        <outlet property="imgLogo" destination="U9X-fT-uVK" id="nbs-eo-KSN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background_Home" width="340" height="670"/>
+        <image name="Logo" width="165" height="52"/>
+        <namedColor name="Neon-verde">
+            <color red="0.22400000691413879" green="1" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
