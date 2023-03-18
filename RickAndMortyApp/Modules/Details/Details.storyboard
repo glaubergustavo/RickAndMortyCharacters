@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background_Home" translatesAutoresizingMaskIntoConstraints="NO" id="VPX-0T-5zy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Home" translatesAutoresizingMaskIntoConstraints="NO" id="VPX-0T-5zy">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epw-R9-ICk">
@@ -34,13 +34,13 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-WI-nOH">
-                                <rect key="frame" x="24" y="175" width="345" height="281"/>
+                                <rect key="frame" x="24" y="175" width="345" height="502"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oue-Yd-DQO">
-                                        <rect key="frame" x="0.0" y="90" width="345" height="191"/>
+                                        <rect key="frame" x="0.0" y="90" width="345" height="205"/>
                                         <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="191" id="xhh-OS-D9x"/>
+                                            <constraint firstAttribute="height" constant="205" id="xhh-OS-D9x"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -104,16 +104,16 @@
                                     <constraint firstItem="lEi-LK-VAS" firstAttribute="top" secondItem="Wd6-WI-nOH" secondAttribute="top" id="Ynd-wH-7w2"/>
                                     <constraint firstItem="Oue-Yd-DQO" firstAttribute="leading" secondItem="Wd6-WI-nOH" secondAttribute="leading" id="cp9-iy-27C"/>
                                     <constraint firstItem="f6r-VR-Gea" firstAttribute="leading" secondItem="Wd6-WI-nOH" secondAttribute="leading" constant="5" id="e23-TJ-8Rl"/>
-                                    <constraint firstAttribute="bottom" secondItem="Oue-Yd-DQO" secondAttribute="bottom" id="xTx-J3-itv"/>
+                                    <constraint firstAttribute="height" constant="502" id="kNy-Kb-qCR"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-21-dfN">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-21-dfN">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1L9-PV-Cge">
-                                <rect key="frame" x="46.666666666666657" y="110" width="300" height="450"/>
+                                <rect key="frame" x="46.666666666666657" y="201" width="300" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="90s-SL-87c"/>
                                     <constraint firstAttribute="height" constant="450" id="BeK-jS-enp"/>
@@ -131,7 +131,6 @@
                             <constraint firstAttribute="bottom" secondItem="R5s-21-dfN" secondAttribute="bottom" id="Zbt-iy-Cd2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R5s-21-dfN" secondAttribute="trailing" id="a7S-ob-MMR"/>
                             <constraint firstItem="Epw-R9-ICk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="akT-2O-2aT"/>
-                            <constraint firstItem="Wd6-WI-nOH" firstAttribute="top" secondItem="6It-Ce-RQL" secondAttribute="bottom" constant="64" id="bRu-Pp-bLH"/>
                             <constraint firstItem="R5s-21-dfN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="c4G-Xo-TQx"/>
                             <constraint firstItem="1L9-PV-Cge" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cSw-8F-5c8"/>
                             <constraint firstItem="Wd6-WI-nOH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="krv-ag-HI7"/>
@@ -153,7 +152,6 @@
                         <outlet property="lblSpecies" destination="riQ-WB-FS7" id="yN9-5r-5A9"/>
                         <outlet property="lblStatus" destination="Lrh-8V-BIX" id="KpJ-uQ-dcE"/>
                         <outlet property="vwBackground" destination="R5s-21-dfN" id="Rhu-67-G7O"/>
-                        <outlet property="vwCharacterDetails" destination="Wd6-WI-nOH" id="Sql-A2-sPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
