@@ -23,6 +23,8 @@ Coverage 16.1%
 
 ![App_Rick_And_Morty](https://user-images.githubusercontent.com/90629963/226081803-7ff048ca-57e5-4b14-8001-771f5591271c.gif)
 
+![App_Rick_And_Morty-No-service](https://user-images.githubusercontent.com/90629963/226234952-6bef6b82-b3c5-440d-ba91-1c07213714f3.gif)
+
 Authors
 
 Glauber Gustavo
