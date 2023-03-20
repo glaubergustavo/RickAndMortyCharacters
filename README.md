@@ -15,9 +15,9 @@ In this app you can find information about the characters from the Rick and Mort
 
 ✅ XCTest: Unit
 
-Coverage 13.9%
+Coverage 16.1%
 
-<img width="1146" alt="Coverage Image" src="https://user-images.githubusercontent.com/90629963/226079323-97beec37-10f7-4c3d-99a4-a577e3d3a312.png">
+<img width="870" alt="Captura de Tela 2023-03-19 às 23 31 04" src="https://user-images.githubusercontent.com/90629963/226233729-12e9b6f9-5321-43dd-978d-1982f8f4a9d9.png">
 
 ## App working
 
