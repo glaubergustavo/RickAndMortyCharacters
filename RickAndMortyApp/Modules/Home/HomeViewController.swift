@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController,
-                                HomePresenterDelegate {    
+class HomeViewController: UIViewController,
+                          HomePresenterDelegate {    
     
     @IBOutlet weak var imgBackground: UIImageView!
     @IBOutlet weak var imgLogo: UIImageView!
