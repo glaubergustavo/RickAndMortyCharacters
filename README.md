@@ -13,11 +13,11 @@ In this app you can find information about the characters from the Rick and Mort
 - URL Session
 - Dependency Injection
 
-✅ XCTest: Unit
+✅ XCTest: Unit & UI
 
-Coverage 16.1%
+Coverage 90.3%
 
-<img width="870" alt="Captura de Tela 2023-03-19 às 23 31 04" src="https://user-images.githubusercontent.com/90629963/226233729-12e9b6f9-5321-43dd-978d-1982f8f4a9d9.png">
+<img width="997" alt="Coverage RickAndMortyApp" src="https://user-images.githubusercontent.com/90629963/227742189-e54231ba-0e2c-4553-adbb-9842c77e7d38.png">
 
 ## App working
 
