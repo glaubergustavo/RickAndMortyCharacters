@@ -119,4 +119,26 @@ final class RickAndMortyAppUITests: XCTestCase {
         XCTAssertTrue(DetailsView.exists)
         XCTAssertTrue(DetailsView.isHittable)
     }
+    
+    func testCharactersDetails_BackButton_ShouldReturnToPreviousScreen() {
+        
+        let app = XCUIApplication()
+        app.launch()
+        let threeCell = app.collectionViews.children(matching: .cell).element(boundBy: 3)
+                                           .children(matching: .other).element
+                                           .children(matching: .other).element
+                                           .children(matching: .other).element
+        threeCell.tap()
+        let characterDetails = app.windows.children(matching: .other).element
+                                          .children(matching: .other).element
+                                          .children(matching: .other).element
+                                          .children(matching: .other).element
+                                          .children(matching: .other).element
+                                          .children(matching: .other).element
+        let backButton = characterDetails.children(matching: .button).element
+        backButton.tap()
+        
+        XCTAssertTrue(threeCell.exists)
+        XCTAssertTrue(threeCell.isHittable)
+    }
 }

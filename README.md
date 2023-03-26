@@ -15,9 +15,9 @@ In this app you can find information about the characters from the Rick and Mort
 
 ✅ XCTest: Unit & UI
 
-Coverage 90.3%
+Coverage 90.9%
 
-<img width="997" alt="Coverage RickAndMortyApp" src="https://user-images.githubusercontent.com/90629963/227742189-e54231ba-0e2c-4553-adbb-9842c77e7d38.png">
+<img width="999" alt="Coverage RickAndMortyApp" src="https://user-images.githubusercontent.com/90629963/227749689-8c9a122d-e7fe-41c5-8846-46116d9fd4f3.png">
 
 ## App working
 
