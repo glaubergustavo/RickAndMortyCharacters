@@ -12,12 +12,13 @@ In this app you can find information about the characters from the Rick and Mort
 - View Code
 - URL Session
 - Dependency Injection
+- Alamofire
 
 ✅ XCTest: Unit & UI
 
-Coverage 90.9%
+Coverage 91.1%
 
-<img width="999" alt="Coverage RickAndMortyApp" src="https://user-images.githubusercontent.com/90629963/227749689-8c9a122d-e7fe-41c5-8846-46116d9fd4f3.png">
+<img width="870" alt="Captura de Tela 2023-07-05 às 22 52 09" src="https://github.com/glaubergustavo/RickAndMortyCharacters/assets/90629963/93575f4d-f24d-40d5-94db-b7c0bd2dc075">
 
 ## App working
 

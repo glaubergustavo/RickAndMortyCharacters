@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol HomeManagerServicing {
     func loadCharacters(page: Int, _ completion: @escaping (Result<Characters?, Error>) -> Void)
@@ -14,45 +15,38 @@ protocol HomeManagerServicing {
 final class HomeManager: HomeManagerServicing {
     
     func loadCharacters(page: Int, _ completion: @escaping (Result<Characters?, Error>) -> Void) {
-        
-        let urlWithPagination: String = Constants.API.BaseURL + "?page=\(page)"
-        
-        guard let url = URL(string: urlWithPagination) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            DispatchQueue.main.async {
-                self?.handle(data: data, error: error, completion: completion)
+            
+            let urlWithPagination: String = Constants.API.BaseURL + "?page=\(page)"
+            
+            AF.request(urlWithPagination).response { [weak self] response in
+                DispatchQueue.main.async {
+                    self?.handle(response: response, completion: completion)
+                }
             }
         }
-        task.resume()
     }
-}
 
-extension HomeManager {
-    func handle(
-        data: Data? = nil,
-        response: HTTPURLResponse? = nil,
-        error: Error? = nil,
-        completion: @escaping(Result<Characters?, Error>) -> Void
-    ) {
-        if let error = error {
-            completion(.failure(error))
-            return
-        }
-        
-        guard let data = data else {
-            return
-        }
-        
-        let jsonDecoder = JSONDecoder()
-        
-        do {
-            let model = try jsonDecoder.decode(Characters.self, from: data)
-            completion(.success(model))
-        } catch {
-            completion(.failure(error))
+    extension HomeManager {
+        func handle(
+            response: AFDataResponse<Data?>,
+            completion: @escaping (Result<Characters?, Error>) -> Void
+        ) {
+            if let error = response.error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = response.data else {
+                return
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                let model = try jsonDecoder.decode(Characters.self, from: data)
+                completion(.success(model))
+            } catch {
+                completion(.failure(error))
+            }
         }
     }
-}
